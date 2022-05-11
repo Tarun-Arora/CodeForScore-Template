@@ -13,13 +13,16 @@ specifiers:
   sass-loader: ^10.0.0
   vue: ^2.6.14
   vue-cli-plugin-vuetify: ~2.4.8
+  vue-router: 3.2.0
   vue-template-compiler: ^2.6.14
   vuetify: ^2.6.0
   vuetify-loader: ^1.7.0
+  webpack: 5.72.1
 
 dependencies:
   core-js: 3.22.5
   vue: 2.6.14
+  vue-router: 3.2.0
   vuetify: 2.6.5_vue@2.6.14
 
 devDependencies:
@@ -31,10 +34,11 @@ devDependencies:
   eslint: 7.32.0
   eslint-plugin-vue: 8.7.1_eslint@7.32.0
   sass: 1.32.13
-  sass-loader: 10.2.1_sass@1.32.13
-  vue-cli-plugin-vuetify: 2.4.8_6897eeb2050c991929b0b03fafab8d99
+  sass-loader: 10.2.1_sass@1.32.13+webpack@5.72.1
+  vue-cli-plugin-vuetify: 2.4.8_f185e7cfabbe2d67ae08f93876604d66
   vue-template-compiler: 2.6.14
-  vuetify-loader: 1.7.3_60db61de9f63ae26dbc68f04f4cfa84c
+  vuetify-loader: 1.7.3_e6020dacecaf36bc51688cde6e152bb6
+  webpack: 5.72.1
 
 packages:
 
@@ -1815,7 +1819,7 @@ packages:
       postcss: 8.4.13
       postcss-loader: 6.2.1_postcss@8.4.13+webpack@5.72.1
       progress-webpack-plugin: 1.0.16_webpack@5.72.1
-      sass-loader: 10.2.1_sass@1.32.13
+      sass-loader: 10.2.1_sass@1.32.13+webpack@5.72.1
       ssri: 8.0.1
       terser-webpack-plugin: 5.3.1_webpack@5.72.1
       thread-loader: 3.0.4_webpack@5.72.1
@@ -3455,7 +3459,7 @@ packages:
       flat-cache: 3.0.4
     dev: true
 
-  /file-loader/6.2.0:
+  /file-loader/6.2.0_webpack@5.72.1:
     resolution: {integrity: sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -3463,6 +3467,7 @@ packages:
     dependencies:
       loader-utils: 2.0.2
       schema-utils: 3.1.1
+      webpack: 5.72.1
     dev: true
 
   /fill-range/7.0.1:
@@ -4535,7 +4540,7 @@ packages:
       boolbase: 1.0.0
     dev: true
 
-  /null-loader/4.0.1:
+  /null-loader/4.0.1_webpack@5.72.1:
     resolution: {integrity: sha512-pxqVbi4U6N26lq+LmgIbB5XATP0VdZKOG25DhHi8btMmJJefGArFyDg1yc4U3hWCJbMqSrw0qyrz1UQX+qYXqg==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -4543,6 +4548,7 @@ packages:
     dependencies:
       loader-utils: 2.0.2
       schema-utils: 3.1.1
+      webpack: 5.72.1
     dev: true
 
   /object-assign/4.1.1:
@@ -5449,7 +5455,7 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass-loader/10.2.1_sass@1.32.13:
+  /sass-loader/10.2.1_sass@1.32.13+webpack@5.72.1:
     resolution: {integrity: sha512-RRvWl+3K2LSMezIsd008ErK4rk6CulIMSwrcc2aZvjymUgKo/vjXGp1rSWmfTUX7bblEOz8tst4wBwWtCGBqKA==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -5471,6 +5477,7 @@ packages:
       sass: 1.32.13
       schema-utils: 3.1.1
       semver: 7.3.7
+      webpack: 5.72.1
     dev: true
 
   /sass/1.32.13:
@@ -6131,7 +6138,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vue-cli-plugin-vuetify/2.4.8_6897eeb2050c991929b0b03fafab8d99:
+  /vue-cli-plugin-vuetify/2.4.8_f185e7cfabbe2d67ae08f93876604d66:
     resolution: {integrity: sha512-1e8tVbJNQPLpdJgx8tlsCrFVSKrohLe5axWwolOuMr9k++X1pg95jiqBxYZdhh7tIl9bNh4wzVPPGQzTIpoS+Q==}
     peerDependencies:
       sass-loader: '*'
@@ -6142,11 +6149,11 @@ packages:
       vuetify-loader:
         optional: true
     dependencies:
-      null-loader: 4.0.1
-      sass-loader: 10.2.1_sass@1.32.13
+      null-loader: 4.0.1_webpack@5.72.1
+      sass-loader: 10.2.1_sass@1.32.13+webpack@5.72.1
       semver: 7.3.7
       shelljs: 0.8.5
-      vuetify-loader: 1.7.3_60db61de9f63ae26dbc68f04f4cfa84c
+      vuetify-loader: 1.7.3_e6020dacecaf36bc51688cde6e152bb6
     transitivePeerDependencies:
       - webpack
     dev: true
@@ -6207,6 +6214,10 @@ packages:
       webpack: 5.72.1
     dev: true
 
+  /vue-router/3.2.0:
+    resolution: {integrity: sha512-khkrcUIzMcI1rDcNtqkvLwfRFzB97GmJEsPAQdj7t/VvpGhmXLOkUfhc+Ah8CvpSXGXwuWuQO+x8Sy/xDhXZIA==}
+    dev: false
+
   /vue-style-loader/4.1.3:
     resolution: {integrity: sha512-sFuh0xfbtpRlKfm39ss/ikqs9AbKCoXZBpHeVZ8Tx650o0k0q/YCM7FRvigtxpACezfq6af+a7JeqVTWvncqDg==}
     dependencies:
@@ -6229,7 +6240,7 @@ packages:
     resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
     dev: false
 
-  /vuetify-loader/1.7.3_60db61de9f63ae26dbc68f04f4cfa84c:
+  /vuetify-loader/1.7.3_e6020dacecaf36bc51688cde6e152bb6:
     resolution: {integrity: sha512-1Kt6Rfvuw3i9BBlxC9WTMnU3WEU7IBWQmDX+fYGAVGpzWCX7oHythUIwPCZGShHSYcPMKSDbXTPP8UvT5RNw8Q==}
     peerDependencies:
       vue-template-compiler: ^2.6.10
@@ -6237,10 +6248,11 @@ packages:
       webpack: ^4.0.0 || ^5.0.0
     dependencies:
       decache: 4.6.1
-      file-loader: 6.2.0
+      file-loader: 6.2.0_webpack@5.72.1
       loader-utils: 2.0.2
       vue-template-compiler: 2.6.14
       vuetify: 2.6.5_vue@2.6.14
+      webpack: 5.72.1
     dev: true
 
   /vuetify/2.6.5_vue@2.6.14:
