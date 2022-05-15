@@ -1,7 +1,22 @@
 {
-    "A": "Janki and Exams",
-    "B": "Youtube Buffering",
-    "C": "Symmetrical Grid",
-    "D": "Aswini and XOR",
-    "E": "Zero Tree"
+    "A": {
+        "id": 0,
+        "name": "Janki and Exams"
+    },
+    "B": {
+        "id": 1,
+        "name": "Youtube Buffering"
+    },
+    "C": {
+        "id": 2,
+        "name": "Symmetrical Grid"
+    },
+    "D": {
+        "id": 3,
+        "name":"Aswini and XOR"
+    },
+    "E": {
+        "id": 4,
+        "name":"Zero Tree"
+    }
 }
