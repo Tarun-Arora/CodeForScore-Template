@@ -71,9 +71,6 @@ export default {
     };
   },
   methods: {
-    parseData() {
-      this.problems = problems;
-    },
     configureCodeMirror(a){
       this.code=a;
       this.editor=CodeMirror.fromTextArea(document.getElementById('editor'), {
@@ -83,6 +80,7 @@ export default {
         matchBrackets: true,
         mode: 'text/x-c++src'
       })
+      this.editor.setSize(-1,600);
       this.editor.setValue(a);
     }
   },
@@ -95,7 +93,7 @@ export default {
       .then((data) => {this.code = data; this.configureCodeMirror(data)});
   },
   mounted() {
-    this.parseData();
+    this.problems = problems;
   },
 };
 </script>

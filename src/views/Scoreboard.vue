@@ -221,17 +221,6 @@ export default {
           align: "center",
         },
       ],
-      desserts: [
-        {
-          value: false,
-          name: "Frozen Yogurt",
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: "1%",
-        },
-      ],
     };
   },
   methods: {
@@ -255,15 +244,6 @@ export default {
         (a[2] < 10 ? "0" + a[2] : a[2])
       );
     },
-    changeSelectionCriteria() {},
-    changeSort(column) {
-      if (this.pagination.sortBy === column) {
-        this.pagination.descending = !this.pagination.descending;
-      } else {
-        this.pagination.sortBy = column;
-        this.pagination.descending = false;
-      }
-    },
     parseData() {
       this.startTime = parseTime(scoreboard.startTime);
       this.endTime = new Date(
@@ -281,7 +261,7 @@ export default {
           username: participant.username,
           score: [
             participant.acSubmissionId.filter((x) => x !== -1).length,
-            participant.penaltyTime.reduce((x, y) => x + y, 0),
+            participant.penaltyTime.filter((problem,index) => participant.acSubmissionId[index]!==-1).reduce((x, y) => x + y, 0),
           ],
         };
         for (let key in problems) {
@@ -303,13 +283,6 @@ export default {
 </script>
 
 <style scoped>
-td.mobile {
-  display: block;
-  width: 99.9%;
-  clear: both;
-  height: fit-content;
-}
-
 span {
   width: fit-content;
   text-align: center;
@@ -318,48 +291,4 @@ span {
 th {
   text-align: center;
 }
-/* .mobile {
-  color: #333;
-}
-
-
-@media screen and (max-width: 768px) {
-  .mobile table.v-table tr {
-    max-width: 100%;
-    position: relative;
-    display: block;
-  }
-
-  .mobile table.v-table tr:nth-child(odd) {
-    border-left: 6px solid deeppink;
-  }
-
-  .mobile table.v-table tr:nth-child(even) {
-    border-left: 6px solid cyan;
-  }
-
-  .mobile table.v-table tr td {
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid #f5f5f5;
-    height: auto;
-    padding: 10px;
-  }
-
-  .mobile table.v-table tr td ul li:before {
-    content: attr(data-label);
-    padding-right: 0.5em;
-    text-align: left;
-    display: block;
-    color: #999;
-  }
-  .v-datatable__actions__select {
-    width: 50%;
-    margin: 0px;
-    justify-content: flex-start;
-  }
-  .mobile .theme--light.v-table tbody tr:hover:not(.v-datatable__expand-row) {
-    background: transparent;
-  }
-} */
 </style>
