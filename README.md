@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cafa7f91-80fe-4019-9e1c-53e7fa5a49c1/deploy-status)](https://app.netlify.com/sites/code-for-score/deploys)
+
 # CodeForScore
 
 ## Cloning the Project
