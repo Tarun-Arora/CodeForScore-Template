@@ -1,7 +1,19 @@
-# scoreboard-template
+# CodeForScore
+
+## Cloning the Project
+```
+git clone https://github.com/Tarun-Arora/CodeForScore-Template.git
+```
+
+This project uses pnpm as the package manager, if you don't have pnpm installed you can install it with the following command
+```
+sudo npm install -g pnpm
+```
+Refer https://pnpm.io/installation for alternatives.
 
 ## Project setup
 ```
+cd CodeForScore-Template
 pnpm install
 ```
 
