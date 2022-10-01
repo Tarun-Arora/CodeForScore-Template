@@ -39,3 +39,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Data
 Currently since there is no backend for this platform, we store the data as files in the `public` folder for now.
+
+The metadata for a submission is stored in `submissions` folder as json file and the code as .txt file.
