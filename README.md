@@ -38,4 +38,4 @@ pnpm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Data
-Currently since there is no backend for this platform.
+Currently since there is no backend for this platform, we store the data as files in the `public` folder for now.
